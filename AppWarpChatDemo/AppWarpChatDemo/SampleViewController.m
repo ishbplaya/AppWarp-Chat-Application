@@ -17,11 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self updateViewForLaunch];
     
     [self initializeAppWarp];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,12 +37,22 @@
     }
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    
+    WarpClient *wrCl = [WarpClient getInstance];
+    [wrCl disconnect];
+    
+    [self updateViewForLaunch];
+    	// Do any additional setup after loading the view, typically from a nib.
+}
+
 #pragma mark  Life Cycle
 - (void) updateViewForLaunch {
     kFunctionLog;
     [[roomSelectionView layer] setCornerRadius:5.0f];
     [[rsHeaderView layer] setCornerRadius:1.0f];
     [[rsListTableView layer] setCornerRadius:1.0f];
+    [userNameTextField setText:@""];
     [self hideSelectionView];
     [self showConnectView];
 }
@@ -141,7 +148,7 @@
 
 #pragma mark - UITextField Delegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
+    [self joinAction:nil];
     return YES;
 }
 

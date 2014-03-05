@@ -32,7 +32,7 @@ static NSString *kLocIDKey = @"LocID";
 {
     [super viewDidLoad];
     
-    [[self navigationItem] setHidesBackButton:YES];
+//    [[self navigationItem] setHidesBackButton:YES];
     
     WarpClient *wrCl = [WarpClient getInstance];
     [wrCl  addChatRequestListener:self];
@@ -48,6 +48,15 @@ static NSString *kLocIDKey = @"LocID";
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+
+    [super viewWillDisappear: animated];
+    
+    WarpClient *wrCl = [WarpClient getInstance];
+    [wrCl leaveRoom:_selectedRoomID];
+    [wrCl unsubscribeRoom:_selectedRoomID];
 }
 
 #pragma mark - Life Cycle Method
