@@ -21,8 +21,8 @@
 		1CE02B0718C5AF97009C0A5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE02AE618C5AF97009C0A5F /* UIKit.framework */; };
 		1CE02B0F18C5AF97009C0A5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CE02B0D18C5AF97009C0A5F /* InfoPlist.strings */; };
 		1CE02B1118C5AF97009C0A5F /* AppWarpChatDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE02B1018C5AF97009C0A5F /* AppWarpChatDemoTests.m */; };
-		1CE02B1B18C5B5ED009C0A5F /* AppWarp_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE02B1A18C5B5ED009C0A5F /* AppWarp_iOS_SDK.framework */; };
 		1CFED43618C6FD7C003BD087 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFED43518C6FD7C003BD087 /* ChatViewController.m */; };
+		1CFED43718C728D8003BD087 /* AppWarp_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE02B1A18C5B5ED009C0A5F /* AppWarp_iOS_SDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,7 @@
 				1CE02AE518C5AF97009C0A5F /* CoreGraphics.framework in Frameworks */,
 				1CE02AE718C5AF97009C0A5F /* UIKit.framework in Frameworks */,
 				1CE02AE318C5AF97009C0A5F /* Foundation.framework in Frameworks */,
-				1CE02B1B18C5B5ED009C0A5F /* AppWarp_iOS_SDK.framework in Frameworks */,
+				1CFED43718C728D8003BD087 /* AppWarp_iOS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +396,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/siddharthachandurkar/Desktop/AppWarpChatDemo,
+					"/Users/siddharthachandurkar/Documents/AppWarp-Chat-Application/AppWarpChatDemo",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppWarpChatDemo/AppWarpChatDemo-Prefix.pch";
@@ -415,6 +416,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/siddharthachandurkar/Desktop/AppWarpChatDemo,
+					"/Users/siddharthachandurkar/Documents/AppWarp-Chat-Application/AppWarpChatDemo",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppWarpChatDemo/AppWarpChatDemo-Prefix.pch";

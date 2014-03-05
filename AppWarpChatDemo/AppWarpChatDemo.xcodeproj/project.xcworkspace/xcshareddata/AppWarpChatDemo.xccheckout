@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F828301E-D5A8-4F3C-B686-70F98C7B89D3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AppWarpChatDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DEA94C52-948E-4C45-960B-A20AEC88449C</key>
+		<string>https://github.com/NitinGShephertz/AppWarp-Chat-Application.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AppWarpChatDemo/AppWarpChatDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DEA94C52-948E-4C45-960B-A20AEC88449C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/NitinGShephertz/AppWarp-Chat-Application.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DEA94C52-948E-4C45-960B-A20AEC88449C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DEA94C52-948E-4C45-960B-A20AEC88449C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AppWarp-Chat-Application</string>
+		</dict>
+	</array>
+</dict>
+</plist>
