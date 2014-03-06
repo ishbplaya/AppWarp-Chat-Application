@@ -32,8 +32,6 @@ static NSString *kLocIDKey = @"LocID";
 {
     [super viewDidLoad];
     
-//    [[self navigationItem] setHidesBackButton:YES];
-    
     WarpClient *wrCl = [WarpClient getInstance];
     [wrCl  addChatRequestListener:self];
     [wrCl addNotificationListener:self];

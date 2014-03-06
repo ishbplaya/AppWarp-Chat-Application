@@ -7,11 +7,15 @@
 //
 
 #import "SampleAppDelegate.h"
+#import "Reachability.h"
+#import "Constants.h"
 
 @implementation SampleAppDelegate
+@synthesize isReachable = _isReachable;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self initializeReachability];
     // Override point for customization after application launch.
     return YES;
 }
@@ -41,6 +45,58 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Reachability Methods
+- (void) initializeReachability {
+    kFunctionLog;
+    //Change the host name here to change the server you want to monitor.
+    NSString *remoteHostName = HOST_URL;
+    _hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
+    [_hostReachability startNotifier];
+    [self updateInterfaceWithReachability:_hostReachability];
+    
+    _internetReachability = [Reachability reachabilityForInternetConnection];
+    [_internetReachability startNotifier];
+    [self updateInterfaceWithReachability:_internetReachability];
+    
+    _wifiReachability = [Reachability reachabilityForLocalWiFi];
+    [_wifiReachability startNotifier];
+    [self updateInterfaceWithReachability:_wifiReachability];
+}
+
+/*! Called by Reachability whenever status changes.*/
+- (void) reachabilityChanged:(NSNotification *)note {
+    kFunctionLog;
+	Reachability* curReach = [note object];
+	NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+	[self updateInterfaceWithReachability:curReach];
+}
+
+
+- (void)updateInterfaceWithReachability:(Reachability *)reachability {
+    kFunctionLog;
+    NSString* statusText = nil;
+
+    if (reachability == _hostReachability || reachability == _internetReachability || reachability == _wifiReachability) {
+        NetworkStatus netStatus = [reachability currentReachabilityStatus];
+        BOOL connectionRequired = [reachability connectionRequired];
+        if (!netStatus && connectionRequired) {
+            _isReachable = FALSE;
+            statusText = @"Internet connection is unavailable. Please check for connect any come back here.";
+        } else {
+            _isReachable = TRUE;
+        }
+    }
+
+    if (!_isReachable) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:statusText delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+        [alert show];
+        isReachableAlertShown = YES;
+        alert = nil;
+    } else {
+        isReachableAlertShown = NO;
+    }
 }
 
 @end

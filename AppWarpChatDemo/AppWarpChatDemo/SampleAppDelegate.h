@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SampleAppDelegate : UIResponder <UIApplicationDelegate>
+@class Reachability;
+
+@interface SampleAppDelegate : UIResponder <UIApplicationDelegate> {
+    /*! Reachablity Related*/
+    Reachability *_hostReachability;
+    Reachability *_internetReachability;
+    Reachability *_wifiReachability;
+    
+    BOOL isReachableAlertShown;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (readonly, nonatomic) BOOL isReachable;
 
 @end

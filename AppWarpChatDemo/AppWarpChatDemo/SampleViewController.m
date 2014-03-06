@@ -34,6 +34,7 @@
     if ([segue.identifier isEqualToString:@"ChatViewSegue"]) {
         ChatViewController *chatView = (ChatViewController *)[segue destinationViewController];
         chatView.selectedRoomID = [_roomIDArray objectAtIndex:[[rsListTableView indexPathForSelectedRow] row]];
+        [[self navigationItem] setTitle:@"Disconnect"];
     }
 }
 
@@ -53,6 +54,8 @@
     [[rsHeaderView layer] setCornerRadius:1.0f];
     [[rsListTableView layer] setCornerRadius:1.0f];
     [userNameTextField setText:@""];
+    [[self navigationItem] setTitle:@"Connect"];
+
     [self hideSelectionView];
     [self showConnectView];
 }

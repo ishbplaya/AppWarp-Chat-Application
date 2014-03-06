@@ -23,6 +23,7 @@
 		1CE02B1118C5AF97009C0A5F /* AppWarpChatDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE02B1018C5AF97009C0A5F /* AppWarpChatDemoTests.m */; };
 		1CFED43618C6FD7C003BD087 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFED43518C6FD7C003BD087 /* ChatViewController.m */; };
 		1CFED43718C728D8003BD087 /* AppWarp_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE02B1A18C5B5ED009C0A5F /* AppWarp_iOS_SDK.framework */; };
+		1CFED43B18C74C8C003BD087 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFED43A18C74C8C003BD087 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		1CE02B1C18C5C86F009C0A5F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		1CFED43418C6FD7C003BD087 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		1CFED43518C6FD7C003BD087 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		1CFED43918C74C8C003BD087 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		1CFED43A18C74C8C003BD087 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 				1CFED43418C6FD7C003BD087 /* ChatViewController.h */,
 				1CFED43518C6FD7C003BD087 /* ChatViewController.m */,
 				1CE02B1C18C5C86F009C0A5F /* Constants.h */,
+				1CFED43818C74C8C003BD087 /* Reachability */,
 				1CE02AFD18C5AF97009C0A5F /* Images.xcassets */,
 				1CE02AE918C5AF97009C0A5F /* Supporting Files */,
 			);
@@ -161,6 +165,15 @@
 				1CE02B0D18C5AF97009C0A5F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CFED43818C74C8C003BD087 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				1CFED43918C74C8C003BD087 /* Reachability.h */,
+				1CFED43A18C74C8C003BD087 /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +278,7 @@
 				1CE02AEF18C5AF97009C0A5F /* main.m in Sources */,
 				1CFED43618C6FD7C003BD087 /* ChatViewController.m in Sources */,
 				1CE02AFC18C5AF97009C0A5F /* SampleViewController.m in Sources */,
+				1CFED43B18C74C8C003BD087 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
